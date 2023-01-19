@@ -84,6 +84,4 @@ dependencies {
     //Glide
     implementation "com.github.skydoves:landscapist-glide:1.6.1"
 
-    //Pager
-    implementation 'com.google.accompanist:accompanist-pager:0.26.1-alpha'
 }
