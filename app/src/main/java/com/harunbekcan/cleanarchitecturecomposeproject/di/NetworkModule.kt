@@ -1,6 +1,6 @@
 package com.harunbekcan.cleanarchitecturecomposeproject.di
 
-import com.harunbekcan.cleanarchitecturecomposeproject.data.api.Service
+import com.harunbekcan.cleanarchitecturecomposeproject.data.remote.Service
 import com.harunbekcan.cleanarchitecturecomposeproject.utils.Constants.BASE_URL
 import com.harunbekcan.cleanarchitecturecomposeproject.utils.CustomHttpLogger
 import dagger.Module
