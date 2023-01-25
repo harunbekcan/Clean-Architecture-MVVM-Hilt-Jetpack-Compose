@@ -1,5 +1,5 @@
 package com.harunbekcan.cleanarchitecturecomposeproject.navigation
 
 sealed class Screen(val route: String){
-    object Users : Screen("users_screen")
+    object Users : Screen("user_list_screen")
 }
