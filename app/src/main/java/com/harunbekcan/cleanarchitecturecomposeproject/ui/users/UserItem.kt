@@ -4,7 +4,6 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -18,13 +17,14 @@ fun UserItem(userUiModel: UserUiModel) {
     Card(
         shape = RoundedCornerShape(8.dp),
         border = BorderStroke(1.5.dp, LightGray),
-        backgroundColor = MaterialTheme.colors.surface,
+        backgroundColor = LightGray,
         modifier = Modifier
-            .width(200.dp)
+            .fillMaxWidth()
             .wrapContentHeight()
+            .padding(8.dp)
     ) {
         Column {
-            Row(modifier = Modifier.width(200.dp)) {
+            Row(modifier = Modifier.fillMaxWidth()) {
                 Text(
                     text = "Name:",
                     textAlign = TextAlign.Center,
@@ -46,7 +46,7 @@ fun UserItem(userUiModel: UserUiModel) {
 
                 )
             }
-            Row(modifier = Modifier.width(200.dp)) {
+            Row(modifier = Modifier.fillMaxWidth()) {
                 Text(
                     text = "User Name:",
                     textAlign = TextAlign.Center,
@@ -64,11 +64,10 @@ fun UserItem(userUiModel: UserUiModel) {
                             top = 16.dp,
                             end = 8.dp
                         )
-
                 )
             }
 
-            Row(modifier = Modifier.width(200.dp)) {
+            Row(modifier = Modifier.fillMaxWidth()) {
                 Text(
                     text = "WebSite:",
                     textAlign = TextAlign.Center,
@@ -87,7 +86,6 @@ fun UserItem(userUiModel: UserUiModel) {
                             top = 16.dp,
                             end = 8.dp
                         )
-
                 )
             }
         }
