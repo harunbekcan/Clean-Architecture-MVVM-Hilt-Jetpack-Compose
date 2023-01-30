@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.harunbekcan.cleanarchitecturecomposeproject.ui.theme.Teal200
+import com.harunbekcan.cleanarchitecturecomposeproject.utils.ErrorText
 
 
 @Composable
@@ -22,6 +23,7 @@ fun UsersScreen(viewModel: UsersViewModel = hiltViewModel()) {
     ){
         UserList(viewModel)
         CircularProgressDialog(viewModel)
+        CheckError(viewModel)
     }
 }
 
@@ -42,6 +44,15 @@ fun CircularProgressDialog(viewModel: UsersViewModel = hiltViewModel()){
                 modifier = Modifier.align(Alignment.Center),
                 color = Teal200
             )
+        }
+    }
+}
+
+@Composable
+fun CheckError(viewModel: UsersViewModel = hiltViewModel()){
+    Box{
+        if (viewModel.state.value.error.isNotBlank()){
+            ErrorText(viewModel.state.value.error, Modifier.align(Alignment.Center))
         }
     }
 }
