@@ -1,23 +1,24 @@
 package com.harunbekcan.cleanarchitecturecomposeproject.ui.users
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.harunbekcan.cleanarchitecturecomposeproject.domain.uimodel.UserUiModel
-import com.harunbekcan.cleanarchitecturecomposeproject.ui.theme.LightGray
+import com.harunbekcan.cleanarchitecturecomposeproject.ui.theme.LightYellow
+import com.harunbekcan.cleanarchitecturecomposeproject.R
+
 
 @Composable
 fun UserItem(userUiModel: UserUiModel) {
     Card(
         shape = RoundedCornerShape(8.dp),
-        border = BorderStroke(1.5.dp, LightGray),
-        backgroundColor = LightGray,
+        backgroundColor = LightYellow,
         modifier = Modifier
             .fillMaxWidth()
             .wrapContentHeight()
@@ -26,7 +27,7 @@ fun UserItem(userUiModel: UserUiModel) {
         Column {
             Row(modifier = Modifier.fillMaxWidth()) {
                 Text(
-                    text = "Name:",
+                    text = stringResource(R.string.name),
                     textAlign = TextAlign.Center,
                     modifier = Modifier
                         .padding(
@@ -48,7 +49,7 @@ fun UserItem(userUiModel: UserUiModel) {
             }
             Row(modifier = Modifier.fillMaxWidth()) {
                 Text(
-                    text = "User Name:",
+                    text = stringResource(R.string.user_name),
                     textAlign = TextAlign.Center,
                     modifier = Modifier
                         .padding(
@@ -69,7 +70,7 @@ fun UserItem(userUiModel: UserUiModel) {
 
             Row(modifier = Modifier.fillMaxWidth()) {
                 Text(
-                    text = "WebSite:",
+                    text = stringResource(R.string.website),
                     textAlign = TextAlign.Center,
                     modifier = Modifier
                         .padding(

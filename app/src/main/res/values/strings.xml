@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CleanArchitectureComposeProject</string>
+
+    <string name="name">Name:</string>
+    <string name="user_name">User Name:</string>
+    <string name="website">WebSite:</string>
 </resources>
